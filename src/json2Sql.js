@@ -7,6 +7,7 @@ export default class Json2Sql {
   constructor(schema, dataSets, params) {
     this.schema = schema;
     this.params = params;
+    console.log('Supplied SQL2JSON Params', params);
     this.dataSets = dataSets;
   }
 

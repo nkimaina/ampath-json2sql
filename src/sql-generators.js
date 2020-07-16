@@ -147,7 +147,8 @@ export default class SqlGenerators {
         let param = params[condition.parameterName];
 
         if ((condition.parameterName && condition.parameterName !== '') && (!param || param === '')) {
-          console.warn('Filter requires a parameter that was not supplied skipping');
+          console.warn('Filter requires a parameter that was not supplied skipping',
+            condition.parameterName, 'available', params);
           continue;
         }
 
